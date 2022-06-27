@@ -15,8 +15,8 @@ import Modal from '@material-ui/core/Modal'
 import Backdrop from '@material-ui/core/Backdrop'
 import Fade from '@material-ui/core/Fade'
 import VendedorCompra from './VendedorCompra'
-import data from '../../../enviroment';
-import VentaForm from './VentaForm';
+import data from '../../../enviroment'
+import VentaForm from './VentaForm'
 const useStyles = makeStyles((theme) => ({
   modal: {
     position: 'absolute',
@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-function PerfilComponent (props) {
+function PerfilComponent(props) {
   const [vendedor, setVendedor] = useState(false)
   const [switchV, setSwitchV] = useState(false)
   const [open, setOpen] = React.useState(false)
@@ -45,17 +45,13 @@ function PerfilComponent (props) {
     setOpen(false)
   }
 
+  const info = LoadDatos(`http://${data.number}/personas/` + localStorage.getItem('userId'))
+  const categorias = LoadDatos(`http://${data.number}/categorias`)
 
-        const info = LoadDatos(`http://${data.number}/personas/`+ localStorage.getItem("userId"));
-        const categorias = LoadDatos(`http://${data.number}/categorias`);
-        
   const auth = parseInt(localStorage.getItem('auth'), 10)
   const role = localStorage.getItem('role')
 
   if (auth && (role === '0' || role === '1')) {
-   
-
-
     return (
             <>
                 <NavbarComponent />
@@ -99,19 +95,21 @@ function PerfilComponent (props) {
                                         ¡Bienvenido {info.nombre}!
                                     </h3>
                                     <h6>
-                                        {info.vendedorTipo !== null ?                                         <FormControlLabel control={<Switch name="modo_vendedor" checked={switchV} />} label="Modo vendedor"
+                                        {info.vendedorTipo !== null
+                                          ? <FormControlLabel control={<Switch name="modo_vendedor" checked={switchV} />} label="Modo vendedor"
                                             onClick={(e) => {
-                                                setSwitchV(!switchV)
-                                            }} /> : ""}
+                                              setSwitchV(!switchV)
+                                            }} />
+                                          : ''}
                                     </h6>
                                     <div>
                                             <div className="btn my-2" onClick={(e) => {
                                               if (!vendedor) {
-                                                setVendedor(false);
+                                                setVendedor(false)
                                                 setOpen(true)
-                                              }                                           
-                                            }}>{info.vendedorTipo !== null ? "Cambiar Plan": "Comprar un Plan"}</div>
-                                        </div>    
+                                              }
+                                            }}>{info.vendedorTipo !== null ? 'Cambiar Plan' : 'Comprar un Plan'}</div>
+                                        </div>
                                 </div>
 
                                 <ul className="nav nav-tabs" id="myTab" role="tablist">
@@ -219,9 +217,9 @@ function PerfilComponent (props) {
 
                     </form>
 
-                    {switchV === true? 
-                    <VentaForm></VentaForm>
-                    : <React.Fragment></React.Fragment>}
+                    {switchV === true
+                      ? <VentaForm></VentaForm>
+                      : <React.Fragment></React.Fragment>}
                     <div className="container_actividad">
                         <div id="title_cont">
                             <h6>Actividad reciente</h6>

@@ -1,9 +1,10 @@
+/* eslint-disable no-unused-vars */
 import './Paginate.css'
 import React, { useState } from 'react'
 import JsonData from './dataTest.json'
 import ReactPaginate from 'react-paginate'
 
-function Paginate () {
+function Paginate() {
   const [users, setUsers] = useState(JsonData.slice(0, 10))
   const [pageNumber, setPageNumber] = useState(0)
 

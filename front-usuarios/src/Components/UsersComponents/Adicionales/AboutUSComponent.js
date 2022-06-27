@@ -6,7 +6,7 @@ import '../../../css/aboutusComponent.css'
 import { Redirect } from 'react-router-dom'
 import React from 'react'
 
-function AboutUSComponent () {
+function AboutUSComponent() {
   const auth = parseInt(localStorage.getItem('auth'), 10)
   const role = localStorage.getItem('role')
 

@@ -6,7 +6,7 @@ import bryan_photo from '../../../imagenes/bryan.jpeg'
 import betsy_photo from '../../../imagenes/betsy.jpeg'
 import karla_photo from '../../../imagenes/karla.png'
 
-function DesarrolladoresComponent () {
+function DesarrolladoresComponent() {
   const auth = parseInt(localStorage.getItem('auth'), 10)
   const role = localStorage.getItem('role')
 

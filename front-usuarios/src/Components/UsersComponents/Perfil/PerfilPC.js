@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import PerfilComponent from './PerfilComponent'
 import LoadProductos from './LoadProductos'
 import axios from 'axios'
-import data from '../../../enviroment';
+import data from '../../../enviroment'
 class PerfilPC extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       categorie_selected: '',
@@ -13,7 +13,7 @@ class PerfilPC extends Component {
     this.handleChange = this.handleChange.bind(this)
   }
 
-  async handleChange (event) {
+  async handleChange(event) {
     await this.setState({ categorie_selected: event.target.value })
     await axios.get(`http://${data.number}/compras?filter[where][id_categoria]=` + this.state.categorie_selected)
       .then(response => response.data)
@@ -24,7 +24,7 @@ class PerfilPC extends Component {
     LoadProductos(this.state.compras)
   }
 
-  render () {
+  render() {
     return (<PerfilComponent
             handleChange= {this.handleChange} />)
   }

@@ -4,9 +4,8 @@ import { connect } from 'react-redux'
 import AuthA from '../../../store/actions/AuthA'
 
 class CarritoPC extends Component {
-  render () {
-    return (<CarritoComponent
-            auth= {this.props.auth} />)
+  render() {
+    return <CarritoComponent auth={this.props.auth} />
   }
 }
 
@@ -16,7 +15,7 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
   return {
     authFn: AuthA(dispatch)
   }

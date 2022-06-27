@@ -32,7 +32,6 @@ const SearchBar = (props) => {
 
 
     const [filtro, setFiltro] = useState([]);
-    // filtro = Request(`http://${data.prod}/productos/nombre/${data1}`);
     const [master, setMaster] = useState([]);
     const [activeIndex, setActiveIndex] = useState(0);
     const { data1 } = props.route.params;

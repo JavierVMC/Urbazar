@@ -13,7 +13,7 @@ import {
   TextField
 } from '@material-ui/core'
 
-function PanelProducts () {
+function PanelProducts() {
   if ((localStorage.getItem('auth') === 'false')) {
     return <Redirect to='/login'/>
   } else {

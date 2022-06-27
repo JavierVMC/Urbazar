@@ -12,7 +12,7 @@ import {
 } from './charts'
 
 class GraphComponent extends React.Component {
-  render () {
+  render() {
     if ((localStorage.getItem('auth') === 'false')) {
       return <Redirect to='/login'/>
     } else {

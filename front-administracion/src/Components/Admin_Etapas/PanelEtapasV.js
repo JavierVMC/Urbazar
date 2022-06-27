@@ -17,7 +17,7 @@ import LoadEtapas from './LoadEtapas'
 import { Redirect } from 'react-router-dom'
 
 export default function PanelEtapasV (props) {
-  const etapas = LoadEtapas('http://134.209.215.193:3000/etapas/')
+  const etapas = LoadEtapas('http://localhost:3000/etapas/')
 
   const auth = parseInt(localStorage.getItem('auth'), 10)
   const role = localStorage.getItem('role')

@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export default function UseTweets (ruta) {
+export default function UseTweets(ruta) {
   const [tweets, setTweet] = useState([])
 
   useEffect(() => {

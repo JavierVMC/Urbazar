@@ -1,4 +1,4 @@
-function FilterProduct () {
+function FilterProduct() {
   const rows = document.getElementsByClassName('MuiTableRow-root')
   const input = document.getElementById('Input')
   const inputText = input.value

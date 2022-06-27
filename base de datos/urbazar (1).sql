@@ -105,7 +105,8 @@ INSERT INTO `carrito` (`ID`, `ID_Usuario`) VALUES
 (1, 1),
 (2, 3),
 (3, 5),
-(4, 7);
+(4, 7),
+(5, 9);
 
 -- --------------------------------------------------------
 
@@ -153,7 +154,8 @@ INSERT INTO `cliente` (`ID`, `ID_Persona`, `ID_Familia`, `subscripcion`) VALUES
 (5, 9, 3, 0),
 (6, 10, 3, 0),
 (7, 11, 4, 0),
-(8, 12, 4, 0);
+(8, 12, 4, 0),
+(9, 906, 4, 0);
 
 -- --------------------------------------------------------
 
@@ -176,7 +178,8 @@ INSERT INTO `detalle_carrito` (`ID_detalle`, `ID_Producto`, `Cantidad`, `id_carr
 (1, 3, 3, 1),
 (2, 1, 2, 2),
 (3, 5, 3, 3),
-(4, 4, 2, 4);
+(4, 4, 2, 4),
+(5, 1, 1, 5);
 
 -- --------------------------------------------------------
 
@@ -420,10 +423,10 @@ CREATE TABLE `producto` (
 
 INSERT INTO `producto` (`ID`, `ID_vendedor`,`ID_Categoria`, `Nombre` ,`Precio`, `Activo`, `Descripcion`, `Stock`, `Promedio_Puntuacion`, `Pedido_Anticipado`, `source`) VALUES
 (1, 2,1, 'zapatos', '23', 1, 'zapatos de vestir ', 20, 4, 1, 'https://vasari.vteximg.com.br/arquivos/ids/193038-500-500/VZC171644-NG-38.jpg?v=637302896491870000'),
-(2, 2,1, 'camisa ', '20', 1, 'camisa de vestir', 7, 4, 1, 'https://bassil.com.ec/3168/camisa-amarilla-manga-corta-barcelona-sporting-club.jpg'),
+(2, 2,1, 'camisa ', '20', 1, 'camisa de vestir', 7, 4, 1, 'https://cdn.shopify.com/s/files/1/0557/6608/9903/products/Oficial2022Frente.jpg?v=1643676574'),
 (3, 4,2, 'computadora ', '500', 1, 'computadora lenovo', 100, 5, 1, 'https://www.idcmayoristas.com/wp-content/uploads/2020/04/002589.jpg'),
 (4, 6,2, 'iphone', '5', 1, 'celular phone 10 ', 20, 5, 1, 'https://images-na.ssl-images-amazon.com/images/I/61ceSVoz1nL._AC_SX385_.jpg'),
-(5, 8,4, 'alcohol', '2', 1, 'alcohol antiseptico', 200, 5, 1, 'https://gontec.com.ec/wp-content/uploads/2020/05/alcohol_anti.png');
+(5, 8,4, 'alcohol', '2', 1, 'alcohol antiseptico', 200, 5, 1, 'https://d2o812a6k13pkp.cloudfront.net/Productos/40383431_01.jpg');
 
 -- --------------------------
 use urbazar; 
@@ -438,9 +441,9 @@ CREATE TABLE `sources` (
   (1,1, 'https://vasari.vteximg.com.br/arquivos/ids/193038-500-500/VZC171644-NG-38.jpg?v=637302896491870000'),
   (2,1, 'https://http2.mlstatic.com/D_NQ_NP_697199-MEC44983042563_022021-W.jpg'), 
   (3, 1, 'https://i.pinimg.com/originals/19/f5/2c/19f52c5e499016adbffe02b729b5309e.jpg'),
-  (4, 2, 'https://bassil.com.ec/4653/camisa-amarilla-manga-corta-barcelona-sporting-club.jpg'),
+  (4, 2, 'https://media.marathon.store/products/h2b/hc5/h00/9157682167838.jpg'),
   (5, 2, 'https://todosobrecamisetas.com/wp-content/uploads/camiseta-barcelona-sc-200-anios-guayaquil-2.jpg'),
-  (6, 2, 'https://bassil.com.ec/3168/camisa-amarilla-manga-corta-barcelona-sporting-club.jpg'),
+  (6, 2, 'https://media.marathon.store/products/h2b/hc5/h00/9157682167838.jpg'),
   (7, 3, 'https://www.idcmayoristas.com/wp-content/uploads/2020/04/002589.jpg'),
   (8, 3, 'https://images-na.ssl-images-amazon.com/images/I/61gn5whRfNL._SL1000_.jpg'),
   (9, 3, 'https://1700digital.com/wp-content/uploads/lenovo-s340gamer2.jpg'),

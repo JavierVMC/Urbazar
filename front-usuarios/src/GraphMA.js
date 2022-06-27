@@ -1,16 +1,18 @@
 export class GraphMA {
-  constructor (direct) {
+  constructor(direct) {
     this.capacity = 10
-    this.matrix = Array(this.capacity).fill(null).map(() => Array(this.capacity).fill(undefined))
+    this.matrix = Array(this.capacity)
+      .fill(null)
+      .map(() => Array(this.capacity).fill(undefined))
     this.vertexes = []
     this.directed = direct
   }
 
-  arrayCopy (src, srcIndex, dest, destIndex, length) {
+  arrayCopy(src, srcIndex, dest, destIndex, length) {
     dest.splice(destIndex, length, ...src.slice(srcIndex, srcIndex + length))
   }
 
-  addVertex (data) {
+  addVertex(data) {
     if (data === undefined || this.vertexes.includes(data)) return false
     this.vertexes.push(data)
     if (this.vertexes.length > this.matrix.length) {
@@ -19,7 +21,7 @@ export class GraphMA {
     return true
   }
 
-  addCapacity () {
+  addCapacity() {
     const tmp = [...Array(this.capacity + (this.capacity / 2) * 3)]
     for (let i = 0; i < this.capacity; i++) {
       for (let k = 0; k < this.capacity; k++) {
@@ -30,7 +32,7 @@ export class GraphMA {
     this.capacity = (this.capacity / 2) * 3
   }
 
-  addEdge (source, destination, weight) {
+  addEdge(source, destination, weight) {
     if (source === undefined || destination === undefined) return false
     const indexS = this.vertexes.indexOf(source)
     const indexD = this.vertexes.indexOf(destination)
@@ -42,7 +44,7 @@ export class GraphMA {
     return true
   }
 
-  getEdge (source, destination) {
+  getEdge(source, destination) {
     if (source === undefined || destination === undefined) return null
     const indexS = this.vertexes.indexOf(source)
     const indexD = this.vertexes.indexOf(destination)
@@ -53,7 +55,7 @@ export class GraphMA {
     }
   }
 
-  setEdge (source, destination, data) {
+  setEdge(source, destination, data) {
     if (source === undefined || destination === undefined) return null
     const indexS = this.vertexes.indexOf(source)
     const indexD = this.vertexes.indexOf(destination)
@@ -65,7 +67,7 @@ export class GraphMA {
     }
   }
 
-  removeVertex (element) {
+  removeVertex(element) {
     if (!this.vertexes.includes(element) || element === undefined) return false
     const indice = this.vertexes.indexOf(element)
     this.vertexes.splice(indice, 1)
@@ -85,12 +87,18 @@ export class GraphMA {
     return true
   }
 
-  size () {
+  size() {
     return this.vertexes.length
   }
 
-  removeEdge (element1, element2) {
-    if (element1 === undefined || element2 === undefined || !this.vertexes.includes(element1) || !this.vertexes.includes(element2)) return false
+  removeEdge(element1, element2) {
+    if (
+      element1 === undefined ||
+      element2 === undefined ||
+      !this.vertexes.includes(element1) ||
+      !this.vertexes.includes(element2)
+    )
+      return false
     const start = this.vertexes.indexOf(element1)
     const end = this.vertexes.indexOf(element2)
     this.matrix[start][end] = 0
@@ -100,7 +108,7 @@ export class GraphMA {
     return true
   }
 
-  toString () {
+  toString() {
     let total = 'V:'
     let tuplas = '['
     total = total + this.vertexes.toString()

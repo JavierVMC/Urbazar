@@ -3,7 +3,7 @@ import NavbarAdmins from '../navBar/navBarPC'
 import ToggleMenuAdmins from '../navBar/TogglemenuAdmins'
 import { Redirect } from 'react-router-dom'
 
-function PanelProducts () {
+function PanelProducts() {
   if ((localStorage.getItem('auth') === 'false')) {
     return <Redirect to='/login'/>
   } else {

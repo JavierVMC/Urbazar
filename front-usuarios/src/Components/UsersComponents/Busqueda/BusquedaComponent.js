@@ -7,7 +7,7 @@ import '../../../css/buscador.css'
 import CategoriaComponent from '../navBar/CategoriaComponent'
 import Paginate from '../Pagination/Paginate'
 import Box from '@material-ui/core/Box'
-import data from '../../../enviroment';
+import data from '../../../enviroment'
 const useStyles = makeStyles((theme) => ({
   root: {
     minWidth: 345

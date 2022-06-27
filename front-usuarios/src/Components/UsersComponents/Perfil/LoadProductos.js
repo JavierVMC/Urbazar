@@ -1,5 +1,5 @@
 
-export default function LoadProductos (compras) {
+export default function LoadProductos(compras) {
   const div = document.getElementById('container_productos')
   const p = document.getElementById('info_vacio')
 

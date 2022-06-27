@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from 'react'
 import Producto from '../Producto/Producto'
 import Slider from 'react-slick'
@@ -47,29 +46,27 @@ export default function UseTweets (ruta) {
 
   useEffect(() => {
     fetch(ruta)
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         setTweet(data)
+        console.log('Data')
+        console.log(data)
       })
-      .catch(error => console.log('Hubo un error ' + error))
+      .catch((error) => console.log('Hubo un error ' + error))
   }, [])
 
   return (
-        <Slider {...settings} className="Slide_img">
-             {
-
-            tweets.map(producto => (
-
-                <Producto
-                    key={producto.id}
-                    id={producto.id}
-                    nombre={producto.nombre}
-                    precio={producto.precio}
-                    foto_src={producto.source}
-                    idVendedor = {producto.idVendedor}
-                />
-            ))
-            }
-       </Slider>
+    <Slider {...settings} className="Slide_img">
+      {tweets.map((producto) => (
+        <Producto
+          key={producto.id}
+          id={producto.id}
+          nombre={producto.nombre}
+          precio={producto.precio}
+          foto_src={producto.source}
+          idVendedor={producto.idVendedor}
+        />
+      ))}
+    </Slider>
   )
 }

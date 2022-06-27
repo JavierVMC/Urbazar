@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import axios from 'axios'
 
 const AuthA = (dispatch) => {

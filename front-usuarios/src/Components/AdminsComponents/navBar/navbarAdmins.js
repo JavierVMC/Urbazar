@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react'
 import { Navbar, NavbarToggler, NavbarBrand } from 'reactstrap'
 import '../../../css/MainComponent.css'

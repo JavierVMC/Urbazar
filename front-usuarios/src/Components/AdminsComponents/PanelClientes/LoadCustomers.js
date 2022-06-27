@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React, { useEffect, useState } from 'react'
 
 import {
@@ -21,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   }
 }))
 
-function LoadCustomers () {
+function LoadCustomers() {
   const classes = useStyles()
 
   const [customers, setCustomers] = useState([])
@@ -31,11 +32,11 @@ function LoadCustomers () {
 
   useEffect(() => {
     fetch('http://localhost:4000/api/customers')
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         setCustomers(data)
       })
-      .catch(error => console.log('Hubo un error ' + error))
+      .catch((error) => console.log('Hubo un error ' + error))
   }, [])
 
   const handleLimitChange = (event) => {
@@ -48,52 +49,37 @@ function LoadCustomers () {
 
   return (
     <>
-
-      <Card
-
-      >
-
+      <Card>
         <Box minWidth={1050}>
           <Table>
-
             <TableHead>
               <TableRow>
                 <TableCell>
                   <Typography>
-                    <Box fontWeight="fontWeightBold">
-                      Foto
-                    </Box>
+                    <Box fontWeight="fontWeightBold">Foto</Box>
                   </Typography>
                 </TableCell>
                 <TableCell>
                   <Typography>
-                    <Box fontWeight="fontWeightBold">
-                      Nombre
-                    </Box>
+                    <Box fontWeight="fontWeightBold">Nombre</Box>
                   </Typography>
                 </TableCell>
                 <TableCell>
                   <Typography>
-                    <Box fontWeight="fontWeightBold">
-                      Identificacion
-                    </Box>
+                    <Box fontWeight="fontWeightBold">Identificacion</Box>
                   </Typography>
                 </TableCell>
                 <TableCell>
                   <Typography>
-                    <Box fontWeight="fontWeightBold">
-                      Etapa
-                    </Box>
+                    <Box fontWeight="fontWeightBold">Etapa</Box>
                   </Typography>
                 </TableCell>
               </TableRow>
             </TableHead>
 
             <TableBody>
-              {customers.slice(0, limit).map((customer) => (
-                <TableRow
-                  hover
-                >
+              {customers.slice(0, limit).map((customer, i) => (
+                <TableRow key={i} hover>
                   <TableCell>
                     <Box
                       alignItems="center" // deepscan-disable-line REACT_MISSING_KEY_PROP
@@ -102,8 +88,7 @@ function LoadCustomers () {
                       <Avatar
                         className={classes.avatar}
                         src={customer.foto}
-                      >
-                      </Avatar>
+                      ></Avatar>
                     </Box>
                   </TableCell>
                   <TableCell>

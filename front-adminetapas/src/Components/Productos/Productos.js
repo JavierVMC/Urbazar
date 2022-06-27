@@ -5,7 +5,7 @@ const Productos = () => {
   const [productoLista, setProductoLista] = useState([]);
   const [load, setLoad] = useState(false);
   useEffect(() => {
-    axios.get("http://134.209.215.193:3000/productos/").then((response) => {
+    axios.get("http://localhost:3000/productos/").then((response) => {
       setProductoLista(response.data);
       setLoad(true);
     });
@@ -34,14 +34,14 @@ const Productos = () => {
                         onClick={(e) => {
                           axios
                             .get(
-                              `http://134.209.215.193:3000/productos/${item.id}`
+                              `http://localhost:3000/productos/${item.id}`
                             )
                             .then((response) => {
                               const producto = response.data;
                               producto.activo = 1;
                               axios
                                 .put(
-                                  `http://134.209.215.193:3000/productos/${item.id}`,
+                                  `http://localhost:3000/productos/${item.id}`,
                                   producto
                                 )
                                 .then((response) => {
@@ -57,14 +57,14 @@ const Productos = () => {
                         onClick={(e) => {
                           axios
                             .get(
-                              `http://134.209.215.193:3000/productos/${item.id}`
+                              `http://localhost:3000/productos/${item.id}`
                             )
                             .then((response) => {
                               const producto = response.data;
                               producto.activo = 0;
                               axios
                                 .put(
-                                  `http://134.209.215.193:3000/productos/${item.id}`,
+                                  `http://localhost:3000productos/${item.id}`,
                                   producto
                                 )
                                 .then((response) => {
@@ -80,12 +80,12 @@ const Productos = () => {
                         onClick={(e) => {
                           axios
                             .get(
-                              `http://134.209.215.193:3000/productos/${item.id}`
+                              `http://localhost:3000/productos/${item.id}`
                             )
                             .then((response) => {
                               axios
                                 .delete(
-                                  `http://134.209.215.193:3000/productos/${item.id}`
+                                  `http://localhost:3000/productos/${item.id}`
                                 )
                                 .then((response) => {
                                   window.location.reload();

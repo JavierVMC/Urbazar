@@ -1,11 +1,12 @@
+/* eslint-disable eqeqeq */
 import React, { Component } from 'react'
 import Register from './Register'
 import ModalComponent from './ModalComponent'
 import axios from 'axios'
 import EncryptPassword from '../Login/EncryptPassword'
-import data from '../../../enviroment';
+import data from '../../../enviroment'
 class RegisterPC extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props)
     this.state = {
       liveDemo: false,
@@ -19,11 +20,11 @@ class RegisterPC extends Component {
     this.cargarUsernames()
   }
 
-  async handleModal () {
+  async handleModal() {
     await this.setState({ liveDemo: !this.state.liveDemo })
   }
 
-  validarCedula () {
+  validarCedula() {
     const input_id = document.getElementById('identificacion')
     const cedula = input_id.value
     const feed = document.getElementById('FormFeedbackId')
@@ -96,7 +97,7 @@ class RegisterPC extends Component {
     }
   }
 
-  validarTelefono () {
+  validarTelefono() {
     const telefono = document.getElementById('telefono')
     const numeroTelefono = telefono.value
 
@@ -115,7 +116,7 @@ class RegisterPC extends Component {
     }
   }
 
-  validarCorreo () {
+  validarCorreo() {
     const divcorreo = document.getElementById('correo')
     const correo = divcorreo.value
     const expresionRegular = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i
@@ -132,7 +133,7 @@ class RegisterPC extends Component {
     }
   }
 
-  colourBorders (node) {
+  colourBorders(node) {
     let flag = true
     for (let i = 0; i < node.length; i++) {
       const subnode = node[i]
@@ -146,7 +147,7 @@ class RegisterPC extends Component {
     return flag
   }
 
-  validarvacios () {
+  validarvacios() {
     const inputs = document.getElementsByTagName('input')
     const selects = document.getElementsByTagName('select')
     const divVacios = document.getElementById('feedbackvacios')
@@ -165,7 +166,7 @@ class RegisterPC extends Component {
     }
   }
 
-  cargarUsernames () {
+  cargarUsernames() {
     axios.get(`http://${data.number}/personas?filter[fields][username]=true`)
       .then(response => response.data)
       .then(res => {
@@ -176,7 +177,7 @@ class RegisterPC extends Component {
       })
   }
 
-  async signUp () {
+  async signUp() {
     const nombreV = document.getElementById('nombre').value
     const idV = document.getElementById('id').value
     const edadV = document.getElementById('edad').value
@@ -207,7 +208,7 @@ class RegisterPC extends Component {
     await this.setState({ liveDemo: !this.state.liveDemo })
   }
 
-  render () {
+  render() {
     return (
             <>
                 <Register

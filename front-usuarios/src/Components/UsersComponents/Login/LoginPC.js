@@ -1,44 +1,36 @@
-import React, {Component} from 'react';
-import LoginPV from "./LoginPV";
-import {connect} from 'react-redux';
-import AuthA from '../../../store/actions/AuthA';
-import Register from "./Register";
-import data from '../../../enviroment';
-class LoginPC extends Component{
-
-
-
-
-    login = async() =>{
-               
-        
-        let payload = {
-            'username': document.getElementById('username').value,
-            'password': document.getElementById('password').value,
-            number : data.number,
-        }
-
-        this.props.authFn.login(payload);
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import AuthA from '../../../store/actions/AuthA'
+import Register from './Register'
+import data from '../../../enviroment'
+class LoginPC extends Component {
+    login = async() => {
+      const payload = {
+        username: document.getElementById('username').value,
+        password: document.getElementById('passwordLogin').value,
+        number: data.number
+      }
+      console.log(payload.username)
+      this.props.authFn.login(payload)
     }
 
-    
-    render(){
-        return( <Register 
+    render() {
+      return (<Register
             login={this.login}
-            auth= {this.props.auth} /> );
+            auth= {this.props.auth} />)
     }
 }
 
 const mapStateToProps = (state) => {
-    return{
-        auth: state.AuthR.auth,
-    }
+  return {
+    auth: state.AuthR.auth
+  }
 }
 
 const mapDispatchToProps = dispatch => {
-    return {
-      authFn: AuthA(dispatch)
-    }
+  return {
+    authFn: AuthA(dispatch)
   }
-  
-export default connect(mapStateToProps, mapDispatchToProps)(LoginPC);
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(LoginPC)

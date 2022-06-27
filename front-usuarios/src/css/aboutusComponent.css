@@ -1,52 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Castoro&display=swap');
-#about_title{
-    margin: auto;
-    font-family: 'Sansita Swashed', cursive;
-    text-align:center;
-    background-color: #203040;
-    padding: 30px 0px 30px;
-    border-bottom: 1px solid  #d4d4d4;
-    color: white;
+#about_title {
+  margin: auto;
+  font-family: 'Sansita Swashed', cursive;
+  text-align: center;
+  background-color: #203040;
+  padding: 30px 0px 30px;
+  border-bottom: 1px solid #d4d4d4;
+  color: white;
 }
 
-.imagen_descp img{
-    border: none;
-    max-width: 60% ;
-    margin: 0px 30px 0px;
+.imagen_descp img {
+  border: none;
+  max-width: 60%;
+  margin: 0px 30px 0px;
 }
 
-.ideas{
-    display: inline-flex;
-    width: 100%;
-    padding: 10%;
-    height: 500px;
-    font-family: 'Castoro', serif;
-    font-size: 20px;
-    vertical-align: center;
-    
+.ideas {
+  display: inline-flex;
+  width: 100%;
+  padding: 10%;
+  height: 500px;
+  font-family: 'Castoro', serif;
+  font-size: 20px;
+  vertical-align: center;
 }
 
-#contenedor_ideas{
-    width: 100%;
+#contenedor_ideas {
+  width: 100%;
 }
 
-
-#contenedor_ideas .odd{
-    background-color:  white;
-
+#contenedor_ideas .odd {
+  background-color: white;
 }
 
-#contenedor_ideas .even{
-    background-color:#203040;
-    color:white;
+#contenedor_ideas .even {
+  background-color: #203040;
+  color: white;
 }
 
 @media (max-width: 600px) and (orientation: portrait) {
-    #about_title{
-        font-size: 10px;
-    }
-    .ideas{
-        font-size: 15px;
-    }
- }
+  #about_title {
+    font-size: 10px;
+  }
+  .ideas {
+    font-size: 15px;
+  }
+}

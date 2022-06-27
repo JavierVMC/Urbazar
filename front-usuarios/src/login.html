@@ -1,97 +1,173 @@
 <html>
-    <head>
-        <meta name="author" content="Beescript"/>
-        <meta charset="utf-8"/>                
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <head>
+    <meta name="author" content="Beescript" />
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
 
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="bootstrap/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style-login2.css" />
+    <!--link rel="stylesheet" type="text/css" href="css/style-Login.css"/-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="css/style.css">     
-        <link rel="stylesheet" type="text/css" href="css/style-login2.css"/>  
-        <!--link rel="stylesheet" type="text/css" href="css/style-Login.css"/-->
+    <title>Urbazar</title>
+  </head>
 
-
-        <title> Urbazar </title>
-       
-    </head>
-
-
-    <body>
-        <div id="cont">
-            <div id="hero" className="col-lg-5 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1" data-aos="fade-up" data-aos-delay="200">
-                <div id="carousel-presentacion" className="carousel slide" data-ride="carousel">
-                    <ol className="carousel-indicators">
-                      <li data-target="#carousel-presentacion" data-slide-to="0" className="active"></li>
-                      <li data-target="#carousel-presentacion" data-slide-to="1"></li>
-                      <li data-target="#carousel-presentacion" data-slide-to="2"></li>
-                    </ol>
-                    <div className="carousel-inner">
-                      <div className="carousel-item active">
-                        <div id=trouble> 
-                            <img src="imagenes/shopping.png" className="promociones" alt="Venta" >
-                            <div className="carousel-caption">
-                                <h5>Vende artículos</h5>
-                                <p>Ditribuye tus productos entre los moradores de la urbanización</p>
-                            </div>
-                        </div>
-                      </div>
-                      <div className="carousel-item">
-                        <img src="imagenes/compras.png" className="d-block promociones" alt="Compra">
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>¿Qué necesitas? ¡Compralo!</h5>
-                            <p>Encuentra productos de tu interés</p>
-                        </div>
-                      </div>
-                      <div className="carousel-item">
-                        <img src="imagenes/team.png" className="d-block promociones" alt="Teams">
-                        <div className="carousel-caption d-none d-md-block">
-                            <h5>!ÚNETE!</h5>
-                            <p>Disfruta de los beneficios que Urbazar tiene para ti</p>
-                        </div>
-                      </div>
-                    </div>
-                    <a className="carousel-control-prev" href="#carousel-presentacion" role="button" data-slide="prev">
-                      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span className="sr-only">Previous</span>
-                    </a>
-                    <a className="carousel-control-next" href="#carousel-presentacion" role="button" data-slide="next">
-                      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span className="sr-only">Next</span>
-                    </a>
-                  </div>
-            </div>
-            <div id="contenedor" className="col-lg-6 order-1 order-lg-2 hero-img" data-aos="zoom-in" data-aos-delay="200">
-                
-                <div id="logo">
-                    <h1>Urbazar</h1>
-                    <img id= "logo-img" src="imagenes/logo.jpg" alt="Logo de Urbazar", style="width:200px; height:200px">                
+  <body>
+    <div id="cont">
+      <div
+        id="hero"
+        className="col-lg-5 d-flex flex-column justify-content-center pt-4 pt-lg-0 order-2 order-lg-1"
+        data-aos="fade-up"
+        data-aos-delay="200"
+      >
+        <div
+          id="carousel-presentacion"
+          className="carousel slide"
+          data-ride="carousel"
+        >
+          <ol className="carousel-indicators">
+            <li
+              data-target="#carousel-presentacion"
+              data-slide-to="0"
+              className="active"
+            ></li>
+            <li data-target="#carousel-presentacion" data-slide-to="1"></li>
+            <li data-target="#carousel-presentacion" data-slide-to="2"></li>
+          </ol>
+          <div className="carousel-inner">
+            <div className="carousel-item active">
+              <div id="trouble">
+                <img
+                  src="imagenes/shopping.png"
+                  className="promociones"
+                  alt="Venta"
+                />
+                <div className="carousel-caption">
+                  <h5>Vende artículos</h5>
+                  <p>
+                    Ditribuye tus productos entre los moradores de la
+                    urbanización
+                  </p>
                 </div>
-                <div id="informacion">
-                        <form>
-                            <div id="datos">
-                                    <input type="text" id="Usuario" name="Usuario" placeholder="Usuario" > <br>
-                               
-                                    <!--label for="Contrasena"> Contraseña </label><br-->
-                                    <input type="password" id="Contrasena" name="Contrasena" placeholder="Contraseña"> <br>       
-                          
-                            </div>
-                            <button type="button" Onclick="location.href='main.html'" className="btn btn-primary">Ingresar</button>
-                            
-                        </form>
-                    <div id="registro">
-                        <p> ¿No tienes una cuenta? <a href= "registro.html"> Regístrate</a></p>
-                    </div>
-                    
+              </div>
             </div>
-          
+            <div className="carousel-item">
+              <img
+                src="imagenes/compras.png"
+                className="d-block promociones"
+                alt="Compra"
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>¿Qué necesitas? ¡Compralo!</h5>
+                <p>Encuentra productos de tu interés</p>
+              </div>
             </div>
+            <div className="carousel-item">
+              <img
+                src="imagenes/team.png"
+                className="d-block promociones"
+                alt="Teams"
+              />
+              <div className="carousel-caption d-none d-md-block">
+                <h5>!ÚNETE!</h5>
+                <p>Disfruta de los beneficios que Urbazar tiene para ti</p>
+              </div>
+            </div>
+          </div>
+          <a
+            className="carousel-control-prev"
+            href="#carousel-presentacion"
+            role="button"
+            data-slide="prev"
+          >
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="sr-only">Previous</span>
+          </a>
+          <a
+            className="carousel-control-next"
+            href="#carousel-presentacion"
+            role="button"
+            data-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="sr-only">Next</span>
+          </a>
         </div>
+      </div>
+      <div
+        id="contenedor"
+        className="col-lg-6 order-1 order-lg-2 hero-img"
+        data-aos="zoom-in"
+        data-aos-delay="200"
+      >
+        <div id="logo">
+          <h1>Urbazar</h1>
+          <img
+            id="logo-img"
+            src="imagenes/logo.jpg"
+            alt="Logo de Urbazar"
+            ,
+            style="width: 200px; height: 200px"
+          />
+        </div>
+        <div id="informacion">
+          <form>
+            <div id="datos">
+              <input
+                type="text"
+                id="Usuario"
+                name="Usuario"
+                placeholder="Usuario"
+              />
+              <br />
 
+              <!--label for="Contrasena"> Contraseña </label><br-->
+              <input
+                type="password"
+                id="Contrasena"
+                name="Contrasena"
+                placeholder="Contraseña"
+              />
+              <br />
+            </div>
+            <button
+              type="button"
+              Onclick="location.href='main.html'"
+              className="btn btn-primary"
+            >
+              Ingresar
+            </button>
+          </form>
+          <div id="registro">
+            <p>
+              ¿No tienes una cuenta? <a href="registro.html"> Regístrate</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
 
-
-
-        <script data-ad-client="ca-pub-9394378522027005" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <script src="bootstrap/js/jquery.js"></script>
-        <script src="bootstrap/js/bootstrap.min.js"></script>
-    </body>
+    <script
+      data-ad-client="ca-pub-9394378522027005"
+      async
+      src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+    ></script>
+    <script src="bootstrap/js/jquery.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </body>
 </html>

@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import data from '../../../enviroment';
+import data from '../../../enviroment'
 const useImporte = (etapaCliente, etapaVendedor) => {
   const [importe, setImporte] = useState(0)
 

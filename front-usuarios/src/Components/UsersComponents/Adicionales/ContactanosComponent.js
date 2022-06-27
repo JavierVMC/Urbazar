@@ -4,8 +4,8 @@ import { Card, CardTitle, CardBody, Modal } from 'reactstrap'
 import '../../../css/ContactanosComponent.css'
 import 'react-datetime/css/react-datetime.css'
 import { Redirect } from 'react-router-dom'
-import data from '../../../enviroment';
-function ContactanosComponent () {
+import data from '../../../enviroment'
+function ContactanosComponent() {
   const [liveDemo, setLiveDemo] = React.useState(false)
   const auth = parseInt(localStorage.getItem('auth'), 10)
   const role = localStorage.getItem('role')

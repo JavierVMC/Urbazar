@@ -1,6 +1,6 @@
 import React from 'react'
 
-function LoadStars (estrellas) {
+function LoadStars(estrellas) {
   const nro_stars = estrellas.estrellas
   const stars = !isNaN(nro_stars) ? parseInt(nro_stars, 10) : 0
 
@@ -21,4 +21,4 @@ function LoadStars (estrellas) {
   )
 }
 
-export {LoadStars} 
+export { LoadStars }

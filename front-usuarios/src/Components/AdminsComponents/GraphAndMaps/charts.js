@@ -1,7 +1,7 @@
 // ##############################
 // // // javascript library for creating charts
 // #############################
-const Chartist = require('chartist')
+import { Interpolation, Svg } from 'chartist'
 
 // ##############################
 // // // variables used to create animation on charts
@@ -37,13 +37,13 @@ const barChart = {
     high: 100,
     low: 0,
     axisX: {
-      labelInterpolationFnc: function (value, index) {
+      labelInterpolationFnc: function(value, index) {
         return index % 2 === 0 ? value : null
       }
     }
   },
   animation: {
-    draw: function (data) {
+    draw: function(data) {
       if (data.type === 'bar') {
         data.element.animate({
           opacity: {
@@ -68,7 +68,7 @@ const pieChart = {
   },
 
   options: {
-    labelInterpolationFnc: function (value) {
+    labelInterpolationFnc: function(value) {
       return value[0]
     }
   },
@@ -78,7 +78,7 @@ const pieChart = {
       chartPadding: 30,
       labelOffset: 100,
       labelDirection: 'explode',
-      labelInterpolationFnc: function (value) {
+      labelInterpolationFnc: function(value) {
         return value
       }
     }],
@@ -88,7 +88,7 @@ const pieChart = {
     }]
   ],
   animation: {
-    draw: function (data) {
+    draw: function(data) {
       if (data.type === 'slice') {
         // Get the total path length in order to use for dash array animation
         const pathLength = data.element._node.getTotalLength()
@@ -163,7 +163,7 @@ const dailySalesChart = {
     series: [[12, 17, 7, 17, 23, 18, 38]]
   },
   options: {
-    lineSmooth: Chartist.Interpolation.cardinal({
+    lineSmooth: Interpolation.cardinal({
       tension: 0
     }),
     low: 0,
@@ -177,7 +177,7 @@ const dailySalesChart = {
   },
   // for animation
   animation: {
-    draw: function (data) {
+    draw: function(data) {
       if (data.type === 'line' || data.type === 'area') {
         data.element.animate({
           d: {
@@ -189,7 +189,7 @@ const dailySalesChart = {
               .translate(0, data.chartRect.height())
               .stringify(),
             to: data.path.clone().stringify(),
-            easing: Chartist.Svg.Easing.easeOutQuint
+            easing: Svg.Easing.easeOutQuint
           }
         })
       } else if (data.type === 'point') {
@@ -248,7 +248,7 @@ const emailsSubscriptionChart = {
       {
         seriesBarDistance: 5,
         axisX: {
-          labelInterpolationFnc: function (value) {
+          labelInterpolationFnc: function(value) {
             return value[0]
           }
         }
@@ -256,7 +256,7 @@ const emailsSubscriptionChart = {
     ]
   ],
   animation: {
-    draw: function (data) {
+    draw: function(data) {
       if (data.type === 'bar') {
         data.element.animate({
           opacity: {
@@ -282,7 +282,7 @@ const completedTasksChart = {
     series: [[230, 750, 450, 300, 280, 240, 200, 190]]
   },
   options: {
-    lineSmooth: Chartist.Interpolation.cardinal({
+    lineSmooth: Interpolation.cardinal({
       tension: 0
     }),
     low: 0,
@@ -295,7 +295,7 @@ const completedTasksChart = {
     }
   },
   animation: {
-    draw: function (data) {
+    draw: function(data) {
       if (data.type === 'line' || data.type === 'area') {
         data.element.animate({
           d: {
@@ -307,7 +307,7 @@ const completedTasksChart = {
               .translate(0, data.chartRect.height())
               .stringify(),
             to: data.path.clone().stringify(),
-            easing: Chartist.Svg.Easing.easeOutQuint
+            easing: Svg.Easing.easeOutQuint
           }
         })
       } else if (data.type === 'point') {
@@ -324,7 +324,7 @@ const completedTasksChart = {
     }
   }
 }
-module.exports = {
+export {
   dailySalesChart,
   emailsSubscriptionChart,
   completedTasksChart,

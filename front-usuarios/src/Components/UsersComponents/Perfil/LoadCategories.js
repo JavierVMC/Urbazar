@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import data from '../../../enviroment';
-export default function UseCategories () {
+import data from '../../../enviroment'
+export default function UseCategories() {
   const [categorias, setCategorias] = useState([])
 
   useEffect(() => {

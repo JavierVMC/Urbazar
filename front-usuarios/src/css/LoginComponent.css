@@ -9,8 +9,23 @@
     width: 80%;
 }
 
+#passwordLogin{
+    color: #000;
+    width: 100%;
+    border:2px solid #02023D;
+    background-color: #fff;
+}
+
+#passwordLog{
+    color: #000;
+    width: 100%;
+    border:2px solid #02023D;
+    background-color: #fff;
+}
+
 body, #root, .container_login{
     height: 100%;
+    width: 100%;
 }
 
 .container_login{
@@ -18,12 +33,14 @@ body, #root, .container_login{
     justify-content: center;
     width: 60%;
 }
+
+.panelDatos{
+    height: 100%;
+}
 #info{
     width: 100%;
 }
-#password{
-    width:100%;
-}
+
 .input_pass{
     margin-bottom: 0px;
 }
@@ -42,10 +59,38 @@ body, #root, .container_login{
     border-top: 5px solid  #f4733e ;
 }
 
+#username::placeholder { color: #02023D; }
+#username{
+    background-color: #fff;
+    color: #000;
+    border: 2px solid #02023D;
+}
+
+
+#passwordLogin::placeholder { color: #02023D; }
+#passwordLog::placeholder { color: #02023D; }
+/*
+#password{
+    color: #FFFFFF;
+    background-color: #02023D;
+    border: #02023D;
+}
+*/
+#password2::placeholder { color: #000; }
+
+#codigoF::placeholder { color: #000; }
+
+.Login-title > h3{
+    font-size: 40px;
+}
+
+.input-group{
+    color: #FFFFFF;
+}
+
 #img_login{
     display: flex;
     justify-content: center;
-    
 }
 
 .btn_eye{
@@ -53,12 +98,13 @@ body, #root, .container_login{
     justify-content: center;
     align-items: center;
     border-radius: 0px .25rem .25rem 0;
-    border-top: 1px solid #ced4da;
-    border-bottom: 1px solid #ced4da;
-    border-right: 1px solid #ced4da;
-    background-color: #ffffff;
+    border-top: 1px solid #02023D;
+    border-bottom: 1px solid #02023D;
+    border-right: 1px solid #02023D;
+    background-color: #02023D;
     
 }
+
 
 .MuiSvgIcon-root {
     fill: #9c9c9c !important;
@@ -71,6 +117,11 @@ body, #root, .container_login{
 }
 #btn-round{
     background: #f4733e;
+    border:none;
+}
+
+#btn-round:hover{
+    background: #E86E3C;
     border:none;
 }
 
@@ -87,10 +138,24 @@ body, #root, .container_login{
 }
 
 #registrate a{
-    color: #B06058;
+    color: #02023D;
 }
 
+.cajaLogoR{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.Urbaz-partR{
+    font-size: 80px;
+    color: #fff;
+}
+.app-partR{
+    font-size: 80px;
+    color: #F4733E;
 
+}
+ 
 /*Responsive*/
 @media only screen and (max-width: 800px) {
     #tarjeta_login{

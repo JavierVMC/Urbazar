@@ -1,0 +1,12 @@
+.btn_eye{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px .25rem .25rem 0;
+    border-top: 1px solid #02023D;
+    border-bottom: 1px solid #02023D;
+    border-right: 1px solid #02023D;
+    background-color: #fff;
+    
+}
+

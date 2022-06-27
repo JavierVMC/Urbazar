@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-key */
 import React, { useEffect, useState } from 'react'
 import {
   Avatar,
@@ -12,14 +13,14 @@ import {
   Typography,
   makeStyles
 } from '@material-ui/core'
-import data from '../../../enviroment';
+import data from '../../../enviroment'
 const useStyles = makeStyles((theme) => ({
   root: {},
   avatar: {
     marginRight: theme.spacing(2)
   }
 }))
-function useLoadResource () {
+function useLoadResource() {
   const classes = useStyles()
 
   const [productos, setProductos] = useState([])

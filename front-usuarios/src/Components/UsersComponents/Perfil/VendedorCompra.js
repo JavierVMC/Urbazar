@@ -1,23 +1,22 @@
-import React from 'react';
-import axios from 'axios';
-import data from '../../../enviroment';
-let vendedoTipoChange = (tipo,info) => {
-    info.vendedorTipo = tipo;
-    console.log(info)
-    axios.put(`http://${data.number}/personas/`+ localStorage.getItem("userId"),info).then((res) => {
-        console.log(res)
-    }).catch(err => {
-        console.log(err)
-    })
+import React from 'react'
+import axios from 'axios'
+import data from '../../../enviroment'
+const vendedoTipoChange = (tipo, info) => {
+  info.vendedorTipo = tipo
+  console.log(info)
+  axios.put(`http://${data.number}/personas/` + localStorage.getItem('userId'), info).then((res) => {
+    console.log(res)
+  }).catch(err => {
+    console.log(err)
+  })
 }
 
-
-const VendedorCompra = ({ setVendedor, setOpen,info }) => {
+const VendedorCompra = ({ setVendedor, setOpen, info }) => {
   const handleClick = () => {
     setVendedor(true)
     setOpen(false)
   }
-  let tipo = info.vendedorTipo;
+  const tipo = info.vendedorTipo
 
   return (
         <div className="row filaCompra">
@@ -36,7 +35,7 @@ const VendedorCompra = ({ setVendedor, setOpen,info }) => {
                         </ul>
 
                     </div>
-                    <button className="btn mb-2" onClick={(e) => { handleClick(); vendedoTipoChange(0,info); }}>{tipo === 0 ? "Ya tengo este plan": "Comprar"}</button>
+                    <button className="btn mb-2" onClick={(e) => { handleClick(); vendedoTipoChange(0, info) }}>{tipo === 0 ? 'Ya tengo este plan' : 'Comprar'}</button>
                 </div>
             </div>
             <div className="col d-flex align-items-stretch justify-content-center my-3">
@@ -54,7 +53,7 @@ const VendedorCompra = ({ setVendedor, setOpen,info }) => {
                         </ul>
 
                     </div>
-                    <button className="btn mb-2" onClick={(e) => { handleClick(); vendedoTipoChange(1,info); }}>{tipo === 1 ? "Ya tengo este plan": "Comprar"}</button>
+                    <button className="btn mb-2" onClick={(e) => { handleClick(); vendedoTipoChange(1, info) }}>{tipo === 1 ? 'Ya tengo este plan' : 'Comprar'}</button>
                 </div>
             </div>
             <div className="col d-flex align-items-stretch justify-content-center my-3">
@@ -73,7 +72,7 @@ const VendedorCompra = ({ setVendedor, setOpen,info }) => {
                             <li>Duis molestie, erat vitae viverra.</li>
                         </ul>
                     </div>
-                    <button className="btn mb-2" onClick={(e) => { handleClick(); vendedoTipoChange(2,info); }}>{tipo === 2 ? "Ya tengo este plan": "Comprar"}</button>
+                    <button className="btn mb-2" onClick={(e) => { handleClick(); vendedoTipoChange(2, info) }}>{tipo === 2 ? 'Ya tengo este plan' : 'Comprar'}</button>
                 </div>
             </div>
             <div className="col d-flex align-items-stretch justify-content-center my-3">
@@ -92,7 +91,7 @@ const VendedorCompra = ({ setVendedor, setOpen,info }) => {
                             <li>Duis molestie, erat vitae viverra.</li>
                         </ul>
                     </div>
-                    <button className="btn mb-2" onClick={(e) => { handleClick(); vendedoTipoChange(3,info); }}>{tipo === 3 ? "Ya tengo este plan": "Comprar"}</button>
+                    <button className="btn mb-2" onClick={(e) => { handleClick(); vendedoTipoChange(3, info) }}>{tipo === 3 ? 'Ya tengo este plan' : 'Comprar'}</button>
                 </div>
             </div>
 

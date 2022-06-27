@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-export default function UseInformation (ruta) {
+export default function UseInformation(ruta) {
   const [informacion, setInformacion] = useState([])
 
   useEffect(() => {
